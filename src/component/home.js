@@ -1,17 +1,18 @@
 import React from "react";
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import aboutImg from '../img/myself.png';
 import galleryImg from '../img/gallery.jpeg';
 import writingImg from '../img/blog.jpeg';
 import projectsImg from '../img/projects.png';
+import { useNavigate } from "react-router-dom";
 
 
 const cardItems = [
     {"id": 1,
     "name": "about",
-    "title": "_myself_",
+    "title": "_self_",
     "description": "A small bio about myself.",
     "img": aboutImg},
     {"id": 2,
@@ -40,6 +41,16 @@ const itemToImageMap = {
 
 const CustomCards = (props) => {
 
+    const handleCardClick = (data) => {
+        console.log("Clicked");
+        if(data["name"] === "about"){
+            props.navigate("/about")
+        }
+        else if(data["name"] === "writing"){
+            window.location.href = `https://technicaldopamine.tech.blog/`;
+        }
+    }
+
     return(
             <ImageListItem sx={{
                 boxShadow: 1,
@@ -51,6 +62,7 @@ const CustomCards = (props) => {
                     transform: 'scale(1.06)'
                 }
             }}
+            onClick={() => handleCardClick(props.data) }
             >
                     <img src={props.data.img} 
                          style={{ height: '350px', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}/>
@@ -82,6 +94,8 @@ const CustomCards = (props) => {
 
 
 export default function Home() {
+    const navigate = useNavigate();
+
     return(
             <Box
                 sx={{
@@ -100,7 +114,7 @@ export default function Home() {
                 align='center'
             >
                 {Object.keys(cardItems).map( (obj, i) => (
-                    <CustomCards key={i} data={cardItems[obj]} />
+                    <CustomCards key={i} data={cardItems[obj]} navigate={navigate}/>
                 ))}                
             </Box>
     )
