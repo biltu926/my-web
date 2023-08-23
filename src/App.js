@@ -1,11 +1,10 @@
 import React, {useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, Link } from "react-router-dom";
-import Container from '@mui/material/Container';
-import Home from './component/Home';
-import Header from "./component/Header";
+import Home from './component/home';
+import Header from "./component/header";
 import About from "./component/about";
 import Gallery from "./component/gallery";
-import Footer from "./component/Footer";
+import Footer from "./component/footer";
 import TechBlog from "./component/techblog";
 import bgImg from './img/bg1.jpg';
 import './App.css';
