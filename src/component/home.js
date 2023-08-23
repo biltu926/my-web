@@ -7,7 +7,7 @@ import galleryImg from '../img/gallery.jpeg';
 import writingImg from '../img/blog.jpeg';
 import projectsImg from '../img/projects.png';
 import { useNavigate } from "react-router-dom";
-
+import "../App.css";
 
 const cardItems = [
     {"id": 1,
@@ -56,7 +56,10 @@ const CustomCards = (props) => {
                 boxShadow: 1,
                 border: 1,
                 borderRadius: '10px',
-                width: 400,
+                width: '50%',
+                "@media (max-width: '767px')": {
+                    width: 'auto'
+                  },
                 color: "#FDFEFE",
                 "&:hover": {
                     transform: 'scale(1.06)'
@@ -78,12 +81,8 @@ const CustomCards = (props) => {
                                 padding: '5px',
                                 width: '50%'
                             }}
-                            flexWrap= 'wrap'>
-                            <p style={{
-                                color: '#A3E4D7',
-                                width: 120,
-                                fontSize: 20
-                            }}>
+                            >
+                            <p className="Card-description-text">
                                 {props.data.description}
                             </p>
                     </Box>
@@ -105,6 +104,9 @@ export default function Home() {
                     m: 2,  
                     },
                     width: '80%',
+                    "@media (max-width: '767px')": {
+                        width: 'auto'
+                      },
                     marginTop: 20,
                     marginLeft: 'auto',
                     marginRight: 'auto',

@@ -46,12 +46,16 @@
   text-align: left;
   margin-bottom: 15px;
   max-width: 500px;
-  max-height: 500px;
-  overflow: auto;
 }
 
 .Href-text-color{
   color: rgb(19, 163, 14);
+}
+
+.Card-description-text{
+  color: '#A3E4D7';
+  width: 120;
+  font-size: 20
 }
 
 ::-webkit-scrollbar {

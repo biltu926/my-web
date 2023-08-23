@@ -70,6 +70,7 @@ export default function Footer() {
           <a href="https://iconscout.com/icons/hackerrank" target="_blank">Free Hackerrank Icon</a> by <a href="https://iconscout.com/contributors/icon-54">Icon 54</a> on <a href="https://iconscout.com">IconScout</a>
           <a href="https://iconscout.com/icons/github" target="_blank">Free Github Icon</a> by <a href="https://iconscout.com/contributors/unicons">Unicons Font</a> on <a href="https://iconscout.com">IconScout</a>
           <a href="https://iconscout.com/icons/linkedin" target="_blank">Free Linkedin Logo Icon</a> by <a href="https://iconscout.com/contributors/icons-mind" target="_blank">Icons Mind</a>
+          <a href="https://www.flaticon.com/free-icons/python-file" title="python file icons">Python file icons created by Flat Icons - Flaticon</a>
           </Typography>
         </Box>
       </Container>
