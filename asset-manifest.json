@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0e5d84e5.css",
+    "main.js": "/static/js/main.aaa1dbc9.js",
+    "static/js/787.e3835ec5.chunk.js": "/static/js/787.e3835ec5.chunk.js",
+    "static/media/cosmic.jpg": "/static/media/cosmic.209e666f606147b529b6.jpg",
+    "static/media/myself.png": "/static/media/myself.9366968e591c31f0a4fc.png",
+    "static/media/projects.png": "/static/media/projects.723258ce6438371e7cf8.png",
+    "static/media/bg1.jpg": "/static/media/bg1.d1b067e41df176b7ada4.jpg",
+    "static/media/gallery.jpeg": "/static/media/gallery.c0c6627509fdf6066588.jpeg",
+    "static/media/blog.jpeg": "/static/media/blog.88bab47641c1cbbf5f86.jpeg",
+    "static/media/atom.png": "/static/media/atom.17e5cb984343d1346ebd.png",
+    "static/media/celery.png": "/static/media/celery.ccc729efe2bfdde49764.png",
+    "static/media/python.png": "/static/media/python.07a98139a3638f2a224b.png",
+    "static/media/amazon.png": "/static/media/amazon.30a3dd97e781057a943f.png",
+    "static/media/geektrust.ico": "/static/media/geektrust.c2fc2883e03ecaac212e.ico",
+    "index.html": "/index.html",
+    "static/media/hackerrank.svg": "/static/media/hackerrank.01f25f6a6251ecdb52a77ed140ab57e3.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.397c5c85e74e66cbc93a0cbd6bd8d0f7.svg",
+    "static/media/github.svg": "/static/media/github.14457ba899e3a15a52b62a911c794869.svg",
+    "main.0e5d84e5.css.map": "/static/css/main.0e5d84e5.css.map",
+    "main.aaa1dbc9.js.map": "/static/js/main.aaa1dbc9.js.map",
+    "787.e3835ec5.chunk.js.map": "/static/js/787.e3835ec5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e5d84e5.css",
+    "static/js/main.aaa1dbc9.js"
+  ]
+}
