@@ -12,9 +12,7 @@ export default function Footer() {
       component="footer"
       sx={{
         p: 5,
-        width: '94%',
-        position: "relative",
-        top: '100px',
+        marginTop: '20%',
         bottom: 0
       }}
     >
@@ -32,11 +30,6 @@ export default function Footer() {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} sm={4} align="center">
-            <Typography variant="h6" color="#F7F9F9" gutterBottom align="center">
-            Background photo by <a href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NASA</a> on <a href="https://unsplash.com/photos/-hI5dX2ObAs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </Typography>
-          </Grid>
 
           <Grid item xs={12} sm={4} align="center">
             <Typography variant="h6" color="#F7F9F9" gutterBottom >

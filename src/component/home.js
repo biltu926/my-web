@@ -3,8 +3,8 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Box, Typography } from "@mui/material";
 import aboutImg from '../img/myself.png';
-import galleryImg from '../img/gallery.jpeg';
-import writingImg from '../img/blog.jpeg';
+import galleryImg from '../img/gallery.png';
+import writingImg from '../img/blog.png';
 import projectsImg from '../img/projects.png';
 import { useNavigate } from "react-router-dom";
 import "../App.css";
@@ -12,37 +12,36 @@ import "../App.css";
 const cardItems = [
     {"id": 1,
     "name": "about",
-    "title": "_self_",
-    "description": "A small bio about myself.",
+    "title": "self.details",
+    "description": "All about myself.",
     "img": aboutImg},
     {"id": 2,
     "name": "gallery",
-    "title": "_gallery_",
-    "description": "A bunch of mobile captures, drawings, and sketches.",
+    "title": "self.media",
+    "description": "Mobile captures, drawings etc.",
     "img": galleryImg},
     {"id": 3,
     "name": "writing",
-    "title": "_techBlog_",
-    "description": "Write ups and essays on different tech topics.",
+    "title": "self.blogs",
+    "description": "Tech writeups, essays, articles.",
     "img": writingImg},
     {"id": 4,
     "name": "projects",
-    "title": "_projects_",
+    "title": "self.projects",
     "description": "Side gigs, and projects",
     "img": projectsImg}
 ]
 
-const itemToImageMap = {
-    "about": null,
-    "gallery": null,
-    "writing": null
+const responsiveBox = {
+
 }
+
+const cardTextColor = '#1C2833'
 
 
 const CustomCards = (props) => {
 
     const handleCardClick = (data) => {
-        console.log("Clicked");
         if(data["name"] === "about"){
             props.navigate("/about")
         }
@@ -51,15 +50,27 @@ const CustomCards = (props) => {
         }
     }
 
+    const cardContainerStyle = {
+        display: 'flex',
+        height: '30%',
+        width: '30%', 
+        padding: 10, 
+        marginTop: '10%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+
+        "@media(max-width: 768px)":{
+            width: '70vh'
+        }
+    }
+
     return(
+        <div style={ cardContainerStyle }>
             <ImageListItem sx={{
                 boxShadow: 1,
                 border: 1,
+                background: "#ffff",
                 borderRadius: '10px',
-                width: '50%',
-                "@media (max-width: '767px')": {
-                    width: 'auto'
-                  },
                 color: "#FDFEFE",
                 "&:hover": {
                     transform: 'scale(1.06)'
@@ -68,25 +79,20 @@ const CustomCards = (props) => {
             onClick={() => handleCardClick(props.data) }
             >
                     <img src={props.data.img} 
-                         style={{ height: '350px', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}/>
+                         style={{ height: 'auto', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}/>
                     <ImageListItemBar
                         title={
-                                <Typography variant="h4" fontWeight="bold" color="#F5FB7E">
+                                <Typography variant="h4" fontWeight="bold" color="#34495E">
                                     {props.data.title}
                                 </Typography>
                             }
                         position="below"
                     />
-                    <Box sx={{
-                                padding: '5px',
-                                width: '50%'
-                            }}
-                            >
-                            <p className="Card-description-text">
-                                {props.data.description}
-                            </p>
+                    <Box sx={{ color: '#566573'}}>
+                        <p className="Card-description-text">{props.data.description}</p>
                     </Box>
             </ImageListItem>
+        </div>
 
     )
 }
@@ -96,21 +102,15 @@ export default function Home() {
     const navigate = useNavigate();
 
     return(
+        <div style={{ width: "100%" }}>
             <Box
                 sx={{
                     display: 'flex',
                     flexDirection: 'row',
-                    '& > :not(style)': {
-                    m: 2,  
-                    },
-                    width: '80%',
-                    "@media (max-width: '767px')": {
-                        width: 'auto'
-                      },
-                    marginTop: 20,
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    overflowX: 'auto',
+                    "@media(max-width: 768px)": {flexDirection: 'column'},
+                    overflow: 'auto',
+                    width: 'auto',
+                    background: ''
                 }}
                 padding='2%'
                 align='center'
@@ -119,5 +119,7 @@ export default function Home() {
                     <CustomCards key={i} data={cardItems[obj]} navigate={navigate}/>
                 ))}                
             </Box>
+        </div>
+
     )
 }

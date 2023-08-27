@@ -6,7 +6,6 @@ import About from "./component/about";
 import Gallery from "./component/gallery";
 import Footer from "./component/footer";
 import TechBlog from "./component/techblog";
-import bgImg from './img/bg1.jpg';
 import './App.css';
 
 
@@ -14,12 +13,7 @@ function App() {
 
   return (
     <Router>
-      <div style={{ backgroundImage: `url(${bgImg})`,
-                    backgroundAttachment: 'fixed',
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    overflowY: 'scroll' }}>
+      <div style={{ width: "100%", background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)" }}>
 
         <Header/>
 

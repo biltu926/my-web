@@ -5,6 +5,8 @@ import hackerrank from '../img/hackerrank.svg';
 import github from '../img/github.svg';
 import linkedin from '../img/linkedin.svg';
 import geektrust from '../img/geektrust.ico';
+import Divider from '@mui/material/Divider';
+import Chip from '@mui/material/Chip';
 import { CategoryScale } from "chart.js";
 import { Typography } from "@mui/material";
 import ControlledAccordions from "./accordionCustom";
@@ -42,7 +44,7 @@ const ResumeComponent = () => {
 const socialLinks = {
     "github": "https://github.com/biltu926",
     "hackerrank": "https://www.hackerrank.com/spiral_bomb",
-    "likedin": "https://www.linkedin.com/in/supratim-halder",
+    "likedin": "https://www.linkedin.com/supratim-halder",
     "geektrust": "https://www.geektrust.com/coding/code-portfolio"
 }
 
@@ -54,37 +56,50 @@ const About = () => {
 
     const socialStyle = {
         fontSize: 20,
-        color: "#ffff",
+        color: "#1F618D",
         fontWeight: "bold",
-        marginLeft: 10,
-        marginBottom: 10
+    }
+    const socialImg = {
+        width: 30, 
+        height: 30,
+        marginLeft: '40%',
+    }
+
+    const socialDivStyle = {
+        marginLeft: 20
     }
 
     return(
         <div className="Resume-container-low">
-            <div className="Section-side-low">
-
-                <div style={{ display: "flex", color: "#ffff" }} onClick={() => redirectExternal("hackerrank")}>
-                    <img src={hackerrank} alt="hackerrank" width={30} height={30}></img>
+            <div style={{ display: "flex", 
+                          alignItems: 'center',
+                          marginTop: 10,
+                          marginBottom: 20 }} >
+                <Typography sx={{ fontSize: 30, fontWeight: 'light' }}> Socials: </Typography>
+                <div onClick={() => redirectExternal("hackerrank")} style={socialDivStyle}>
+                    <img src={hackerrank} alt="hackerrank" style={ socialImg }></img>
                     <Typography style={socialStyle}> Hackerrank </Typography>
                 </div>
 
-                <div style={{ display: "flex", color: "#ffff" }} onClick={() => redirectExternal("github")}>
-                    <img src={github} alt="github" width={30} height={30}></img>
+                <div onClick={() => redirectExternal("github")} style={socialDivStyle}>
+                    <img src={github} alt="github" style={ socialImg } ></img>
                     <Typography style={socialStyle}> Github </Typography>
                 </div>
 
-                <div style={{ display: "flex", color: "#ffff" }} onClick={() => redirectExternal("linkedin")}>
-                    <img src={linkedin} alt="linkedin" width={30} height={30}></img>
+                <div onClick={() => redirectExternal("linkedin")} style={socialDivStyle}>
+                    <img src={linkedin} alt="linkedin" style={ socialImg }></img>
                     <Typography style={socialStyle}> Linkedin </Typography>
                 </div>
 
-                <div style={{ display: "flex", color: "#ffff" }} onClick={() => redirectExternal("geektrust")}>
-                    <img src={geektrust} alt="geektrust" width={20} height={20}></img>
+                <div onClick={() => redirectExternal("geektrust")} style={socialDivStyle}>
+                    <img src={geektrust} alt="geektrust" style={ socialImg }></img>
                     <Typography style={socialStyle}> Geektrust </Typography>
                 </div>
                 
             </div>
+            <Divider style={{width:'40%', marginTop: 15, marginBottom: 15 }}>
+                <Chip label="Or" />
+            </Divider>
             <div className="Section-center-low">
                 <ResumeComponent />
             </div>

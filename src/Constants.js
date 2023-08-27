@@ -6,18 +6,23 @@ export const customTheme = extendTheme({
         // `--joy` is the default CSS variable prefix.
         // If you have a custom prefix, you have to use it instead.
         // For more details about the custom prefix, go to https://mui.com/joy-ui/customization/using-css-variables/#custom-prefix
-        fontSize: 90,
+        fontSize: 96,
+        "@media(max-width: 767px)": {
+          fontSize: 50
+        },
+        fontWeight: 'bold',
         background:
-          'linear-gradient(-60deg, var(--joy-palette-success-100, #77EC95), var(--joy-palette-primary-500))',
+          'linear-gradient(-60deg, var(--joy-palette-success-200), var(--joy-palette-primary-700))',
         // `Webkit*` properties must come later.
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       },
       display2: {
-        fontSize: 27,
-        background:
-          '#FDFEFE',
+        fontSize: 20,
+        background: '#ffff',
         fontWeight: 'light',
+        marginTop: 3,
+        width: 'auto',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent'
       },

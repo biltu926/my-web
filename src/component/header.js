@@ -10,15 +10,17 @@ const Header = () => {
   return (
       <Box sx={{
         p: 5,
-        height: '100%',
-      }} >
+        background: "#000000"
+      }} 
+      marginLeft="auto"
+      marginRight="auto">
           <CssVarsProvider theme={customTheme}>
             <Box sx={(theme) => theme.typography.display1} align='center' > 
               Supratim Halder
             </Box>
 
             <Box sx={(theme) => theme.typography.display2} align='center'>
-              Software engineer | Bibliophile | Politics enthusiast | Real madrid forever.
+              Software engineer, Bibliophile, Politics enthusiast, Real madrid forever.
             </Box>
           </CssVarsProvider>
       </Box>

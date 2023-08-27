@@ -5,26 +5,22 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/material/styles';
-import cosmic from '../img/cosmic.jpg';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { Greenarc, ParaboleTwo, ParaboleOne, Freelance, TravelItinerary } from './WorkExp';
-import { CssVarsProvider } from '@mui/joy/styles';
-import { customTheme } from '../Constants';
 import '../App.css';
 
 
-const resumeContent = [
-    {},
-    {},
-    {}
-]
 const CustomAccordion = styled(Accordion)(({ theme }) => {
     return {
       boxShadow: 'none', // this styles directly apply to accordion,
-      background: 'transparent',
-      border: `0px solid gray`,
+      background: 'linear-gradient(-60deg, var(--joy-palette-neutral-200, #DDE7EE), var(--joy-palette-primary-200))',
+      maxWidth: 'auto',
+      "@media(maxWidth: 767px)": {
+        maxWidth: '30vh'
+      },
+      border: `1px solid gray`,
       '.MuiAccordionDetails-root': {
       },
       '.MuiAccordionSummary-root': {
@@ -33,6 +29,10 @@ const CustomAccordion = styled(Accordion)(({ theme }) => {
     };
   });
 
+const accordionHeadingColor = "#1F618D";
+const textColor = "#17202A";
+const accordionExpandIcon = "#E74C3C";
+const accordionSymbol = "#1F618D";
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
@@ -42,25 +42,27 @@ export default function ControlledAccordions() {
   };
 
   return (
-    <div style={{ background: `url(${cosmic})` }}>
+    <div style={{ 
+
+    }}>
         
         { /* Academics */ }
           <div style={{ padding: 5 }}>
           <CustomAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
             
             <AccordionSummary
-              expandIcon={<AddIcon style={{ color: "#ffff" }} />}
+              expandIcon={<AddIcon style={{ color: accordionExpandIcon }} />}
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
               <div className='Resume-section'>
                 <div className='Section-side'>
-                  <SchoolIcon style={{ color: "#92E6FA" }}/>
+                  <SchoolIcon style={{ color: accordionSymbol }}/>
                 </div>
 
                 <div>
                   <Typography sx={{ fontWeight: "light", 
-                                    color: "#92E6FA",
+                                    color: accordionHeadingColor,
                                     fontSize: 30}}>
                     Academic background
                   </Typography>
@@ -70,14 +72,14 @@ export default function ControlledAccordions() {
             </AccordionSummary>
 
             <AccordionDetails>
-              <ol style={{ color: "#ffff" }}>
+              <ol style={{ color: textColor }}>
                 <li>
                   <div className='Text-format-left'>
-                    <Typography sx={{ color: "#ffff"}}>
+                    <Typography sx={{ color: textColor}}>
                       Master in computer applications (MCA). CGPA 8.
                     </Typography>
 
-                    <Typography sx={{ color: "#ffff" }}>
+                    <Typography sx={{ color: textColor }}>
                       RCC Institute of Information Technology, Kolkata 2017.
                     </Typography>
                   </div>
@@ -85,11 +87,11 @@ export default function ControlledAccordions() {
 
                 <li>
                   <div className='Text-format-left'>
-                    <Typography sx={{ color: "#ffff"}}>
+                    <Typography sx={{ color: textColor }}>
                       Bachelor of science (BSc) in Computer science. First class honours.
                     </Typography>
 
-                    <Typography sx={{ color: "#ffff" }}>
+                    <Typography sx={{ color: textColor }}>
                       University of Calcutta, Kolkata 2014.
                     </Typography>
                   </div>
@@ -107,18 +109,18 @@ export default function ControlledAccordions() {
             <CustomAccordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
               
               <AccordionSummary
-                expandIcon={<AddIcon style={{ color: "#ffff" }} />}
+                expandIcon={<AddIcon style={{ color: accordionExpandIcon }} />}
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
                 <div className='Resume-section'>
                   <div className='Section-side'>
-                    <WorkspacePremiumIcon style={{ color: "#92E6FA" }}/>
+                    <WorkspacePremiumIcon style={{ color: accordionSymbol }}/>
                   </div>
 
                   <div>
                     <Typography sx={{ fontWeight: "light", 
-                                      color: "#92E6FA",
+                                      color: accordionHeadingColor,
                                       fontSize: 30}}>
                       Certification and courses
                     </Typography>
@@ -129,9 +131,9 @@ export default function ControlledAccordions() {
 
               <AccordionDetails>              
                 <div className='Text-format-left'>
-                  <ol style={{ color: "#ffff" }}>
+                  <ol style={{ color: textColor }}>
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                         Certificate in Python, JavaScript and Problem Solving by
                         <a href='https://www.hackerrank.com/spiral_bomb' 
                         target="_blank"
@@ -140,7 +142,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                         Certificate on Chemicals and health by 
                         <a href="https://www.coursera.org/account/accomplishments/verify/VZ2BX4LVLYZ5" 
                         target="_blank"
@@ -149,7 +151,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                       Online course on Climate Change International Legal Regime by
                         <a href="https://www.coursera.org/account/accomplishments/verify/VZ2BX4LVLYZ5" 
                         target="_blank"
@@ -158,7 +160,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                         Certificate on Data structures and algorithms by 
                         <a href="https://courses.edx.org/certificates/1d6f9a2443b849c9b6e6b098d8eb228a" 
                         target="_blank"
@@ -167,7 +169,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                         Certificate on The Sustainable Development Goals by 
                         <a href="https://www.coursera.org/account/accomplishments/verify/PKNWE9NQUHYU" 
                         target="_blank"
@@ -176,7 +178,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                         Certificate on Impact measurement and management for the SDGs by 
                         <a href="https://www.coursera.org/account/accomplishments/verify/N5TEKRK55TEZ" 
                         target="_blank"
@@ -194,18 +196,18 @@ export default function ControlledAccordions() {
             <CustomAccordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
               
               <AccordionSummary
-                expandIcon={<AddIcon style={{ color: "#ffff" }} />}
+                expandIcon={<AddIcon style={{ color: accordionExpandIcon }} />}
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
                 <div className='Resume-section'>
                   <div className='Section-side'>
-                    <EmojiEventsIcon style={{ color: "#92E6FA" }}/>
+                    <EmojiEventsIcon style={{ color: accordionSymbol }}/>
                   </div>
 
                   <div>
                     <Typography sx={{ fontWeight: "light", 
-                                      color: "#92E6FA",
+                                      color: accordionHeadingColor,
                                       fontSize: 30}}>
                       Achievements and awards
                     </Typography>
@@ -217,9 +219,9 @@ export default function ControlledAccordions() {
               <AccordionDetails>
                 
                 <div className='Text-format-left'>
-                  <ol style={{ color: "#ffff" }}>
+                  <ol style={{ color: textColor }}>
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                       Obtained gold badge in Problem solving, Python and SQL in 
                       <a href="https://www.hackerrank.com/spiral_bomb" 
                       target="_blank"
@@ -228,7 +230,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                       Obtained silver member in coding at 
                       <a href="https://www.geektrust.com/coding/code-portfolio" 
                       target="_blank"
@@ -237,7 +239,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                       Won Employee award for successfully executing the Komida (BNP Pariba) pilot project at 
                       <a href="https://greenarccapital.com/" 
                       target="_blank"
@@ -246,7 +248,7 @@ export default function ControlledAccordions() {
                     </li>
 
                     <li>
-                      <Typography sx={{ color: "#ffff"}}>
+                      <Typography sx={{ color: textColor }}>
                       Cleared IBM Master the mainframe contest 2016 (Level - 2).
                       <a href="https://www.ibm.com/z?utm_content=SRCWW&p1=Search&p4=43700068084919892&p5=p&gclid=Cj0KCQjwldKmBhCCARIsAP-0rfxuIaVakl1KJT0WMkEUKsdy9uAKBCIe43Hx0n2ORpOv7FchrZiXDrYaAh4OEALw_wcB&gclsrc=aw.ds" 
                       target="_blank"
@@ -268,18 +270,18 @@ export default function ControlledAccordions() {
             <CustomAccordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
               
               <AccordionSummary
-                expandIcon={<AddIcon style={{ color: "#ffff" }} />}
+                expandIcon={<AddIcon style={{ color: accordionExpandIcon }} />}
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
                 <div className='Resume-section'>
                   <div className='Section-side'>
-                    <SchoolIcon style={{ color: "#92E6FA" }}/>
+                    <SchoolIcon style={{ color: accordionSymbol }}/>
                   </div>
 
                   <div>
                     <Typography sx={{ fontWeight: "light", 
-                                      color: "#92E6FA",
+                                      color: accordionHeadingColor,
                                       fontSize: 30}}>
                       Work experience
                     </Typography>
