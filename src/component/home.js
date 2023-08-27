@@ -56,6 +56,8 @@ const CustomCards = (props) => {
         marginTop: '10%',
         marginLeft: 'auto',
         marginRight: 'auto',
+        width: '60%',
+        height: '40%'
     }
 
     return(
