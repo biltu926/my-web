@@ -5,34 +5,38 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/material/styles';
-import SchoolIcon from '@mui/icons-material/School';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { Greenarc, ParaboleTwo, ParaboleOne, Freelance, TravelItinerary } from './WorkExp';
+import { CssVarsProvider } from '@mui/joy/styles';
+import { customTheme } from "../Constants";
 import '../App.css';
 
 
 const CustomAccordion = styled(Accordion)(({ theme }) => {
     return {
       boxShadow: 'none', // this styles directly apply to accordion,
-      background: 'linear-gradient(-60deg, var(--joy-palette-neutral-200, #DDE7EE), var(--joy-palette-primary-200))',
-      maxWidth: 'auto',
-      "@media(maxWidth: 767px)": {
-        maxWidth: '30vh'
-      },
+      background: 'linear-gradient(90deg, rgba(235,235,247,1) 17%, rgba(225,225,223,0.24555759803921573) 49%)',
       border: `1px solid gray`,
+      width: 'auto',
+      "@media (max-width: 767px)": {
+        width: 'calc(100% - 20vh)'
+      },
+      maxWidth: 'auto',
+      "@media (max-width: 767px)": {
+        maxWidth: 350
+      },
       '.MuiAccordionDetails-root': {
       },
       '.MuiAccordionSummary-root': {
-        fontFamily: `Quicksand`
+        fontFamily: `Quicksand`,
+        color: 'linear-gradient(90deg, rgba(192,144,247,1) 0%, rgba(114,5,160,1) 100%)'
       }, // this apply to Summary
     };
   });
 
-const accordionHeadingColor = "#1F618D";
-const textColor = "#17202A";
-const accordionExpandIcon = "#E74C3C";
-const accordionSymbol = "#1F618D";
+  {/* 820b38*/ }
+const accordionHeadingColor = "linear-gradient(90deg, rgba(192,144,247,1) 0%, rgba(114,5,160,1) 100%)";
+const textColor = "#000000";
+const accordionExpandIcon = "#ffff";
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
@@ -56,13 +60,10 @@ export default function ControlledAccordions() {
               id="panel1bh-header"
             >
               <div className='Resume-section'>
-                <div className='Section-side'>
-                  <SchoolIcon style={{ color: accordionSymbol }}/>
-                </div>
 
                 <div>
-                  <Typography sx={{ fontWeight: "light", 
-                                    color: accordionHeadingColor,
+                  <Typography sx={{ fontWeight: 'bold', 
+                                    backgroundColor: accordionHeadingColor,
                                     fontSize: 30}}>
                     Academic background
                   </Typography>
@@ -114,12 +115,9 @@ export default function ControlledAccordions() {
                 id="panel1bh-header"
               >
                 <div className='Resume-section'>
-                  <div className='Section-side'>
-                    <WorkspacePremiumIcon style={{ color: accordionSymbol }}/>
-                  </div>
 
                   <div>
-                    <Typography sx={{ fontWeight: "light", 
+                    <Typography sx={{ fontWeight: "bold", 
                                       color: accordionHeadingColor,
                                       fontSize: 30}}>
                       Certification and courses
@@ -201,12 +199,9 @@ export default function ControlledAccordions() {
                 id="panel1bh-header"
               >
                 <div className='Resume-section'>
-                  <div className='Section-side'>
-                    <EmojiEventsIcon style={{ color: accordionSymbol }}/>
-                  </div>
 
                   <div>
-                    <Typography sx={{ fontWeight: "light", 
+                    <Typography sx={{ fontWeight: "bold", 
                                       color: accordionHeadingColor,
                                       fontSize: 30}}>
                       Achievements and awards
@@ -275,12 +270,9 @@ export default function ControlledAccordions() {
                 id="panel1bh-header"
               >
                 <div className='Resume-section'>
-                  <div className='Section-side'>
-                    <SchoolIcon style={{ color: accordionSymbol }}/>
-                  </div>
 
                   <div>
-                    <Typography sx={{ fontWeight: "light", 
+                    <Typography sx={{ fontWeight: "bold", 
                                       color: accordionHeadingColor,
                                       fontSize: 30}}>
                       Work experience

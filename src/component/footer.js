@@ -48,12 +48,31 @@ export default function Footer() {
               <Twitter />
             </Link>
           </Grid>
+
+          <Grid item xs={12} sm={4} align="center">
+            <Typography variant="h6" color="#F7F9F9" gutterBottom >
+              Connect with me
+            </Typography>
+            <Link href="https://www.facebook.com/" color="#FDFEFE" >
+              <Facebook />
+            </Link>
+            <Link
+              href="https://www.instagram.com/"
+              sx={{ pl: 1, pr: 1 }}
+             color="#FDFEFE">
+              <Instagram />
+            </Link>
+            <Link href="https://www.twitter.com/" color="#FDFEFE" >
+              <Twitter />
+            </Link>
+          </Grid>
         </Grid>
+
         <Box mt={5}>
           <Typography variant="body2" color="#F7F9F9" align="center">
             {"Copyright © "}
             <Link color="inherit" href="https://your-website.com/">
-              columbusitinerary.com
+              supratimhldr6@gmail.com
             </Link>{" "}
             {new Date().getFullYear()}
             {"."}

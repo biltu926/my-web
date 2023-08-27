@@ -13,25 +13,6 @@ import ControlledAccordions from "./accordionCustom";
 
 import '../App.css';
 
-
-
-Chart.register(CategoryScale);
-
-const HighlightComponent = () => {
-    return (
-        <Box sx={{
-            width: '100%',
-            height: 100,
-            marginBottom: 7,
-            color: '#ffff'
-          }}>
-            I work on:
-            <Typography fontSize={30} fontWeight='light'>
-                Python, Javascript, ReactJS, Golang, CSS, HTML, Cloud Technologies, Application architecture, System design.
-            </Typography>
-        </Box>
-    )
-}
 const ResumeComponent = () => {
     return(
         <Box align="center" >
@@ -56,26 +37,31 @@ const About = () => {
 
     const socialStyle = {
         fontSize: 20,
-        color: "#1F618D",
+        color: "#0F3964",
         fontWeight: "bold",
     }
     const socialImg = {
-        width: 30, 
-        height: 30,
-        marginLeft: '40%',
+        width: 50, 
+        height: 50,
+        marginRight: 'inherit'
     }
 
     const socialDivStyle = {
-        marginLeft: 20
+        marginLeft: 30,
+        padding: 20,
+        marginTop: '15px',
+        flexWrap: 'wrap',
+    }
+
+    const socialContainer = {
+        display: 'flex', 
+        flexWrap: 'wrap',
     }
 
     return(
         <div className="Resume-container-low">
-            <div style={{ display: "flex", 
-                          alignItems: 'center',
-                          marginTop: 10,
-                          marginBottom: 20 }} >
-                <Typography sx={{ fontSize: 30, fontWeight: 'light' }}> Socials: </Typography>
+            <div style={socialContainer}>
+
                 <div onClick={() => redirectExternal("hackerrank")} style={socialDivStyle}>
                     <img src={hackerrank} alt="hackerrank" style={ socialImg }></img>
                     <Typography style={socialStyle}> Hackerrank </Typography>
@@ -90,15 +76,12 @@ const About = () => {
                     <img src={linkedin} alt="linkedin" style={ socialImg }></img>
                     <Typography style={socialStyle}> Linkedin </Typography>
                 </div>
-
-                <div onClick={() => redirectExternal("geektrust")} style={socialDivStyle}>
-                    <img src={geektrust} alt="geektrust" style={ socialImg }></img>
-                    <Typography style={socialStyle}> Geektrust </Typography>
-                </div>
                 
             </div>
-            <Divider style={{width:'40%', marginTop: 15, marginBottom: 15 }}>
-                <Chip label="Or" />
+            <Divider  style={{width:'40%', 
+                             marginTop: '5%', 
+                             marginBottom: '5%'}}>
+                <Chip label="Bio" />
             </Divider>
             <div className="Section-center-low">
                 <ResumeComponent />

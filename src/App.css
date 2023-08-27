@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .Resume-section {
@@ -16,6 +17,9 @@
   display: flex;
   flex-direction: column;
   width: '100%';
+  @media screen (max-width: 678px) {
+    width: '40%'
+  }
   margin-top: 30px;
   align-items: center;
 }
@@ -35,8 +39,9 @@
 
 .Section-center-low{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin-top: 10px;
+  width: 'auto';
 }
 
 .Section-center{

@@ -67,6 +67,7 @@ const CustomCards = (props) => {
                 border: 1,
                 background: "#ffff",
                 borderRadius: '10px',
+                boxShadow: 6,
                 color: "#FDFEFE",
                 "&:hover": {
                     transform: 'scale(1.06)'
