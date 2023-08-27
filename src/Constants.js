@@ -35,6 +35,24 @@ export const customTheme = extendTheme({
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent'
       },
+      display4: {
+        fontSize: 26,
+        marginTop: 10,
+        background: 'radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
+        fontFamily: `'Playfair Display', serif;`,
+        fontWeight: 'light',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
+      },
+      display5: {
+        fontSize: 26,
+        background: '#2E020E',
+        fontFamily: `'Raleway', sans-serif`,
+        fontWeight: 'bold',
+        marginTop: 5,
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
+      },
       workExpHeader:{
         fontSize: 25,
         fontFamily: `'Edu SA Beginner', cursive`,

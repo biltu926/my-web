@@ -1,12 +1,16 @@
 import React from "react";
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
 import aboutImg from '../img/myself.png';
 import galleryImg from '../img/gallery.png';
 import writingImg from '../img/blog.png';
 import projectsImg from '../img/projects.png';
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import { useState} from "react";
+import Snackbar from '@mui/material/Snackbar';
+import { CssVarsProvider } from '@mui/joy/styles';
+import { customTheme } from "../Constants";
 import "../App.css";
 
 const cardItems = [
@@ -41,6 +45,17 @@ const cardTextColor = '#1C2833'
 
 const CustomCards = (props) => {
 
+    const [state, setState] = useState(false);
+    
+      const handleClick = () => {
+        console.log("Handle clicked 2");
+        setState(true);
+      };
+    
+      const handleClose = () => {
+        setState(false);
+      };
+
     const handleCardClick = (data) => {
         if(data["name"] === "about"){
             props.navigate("/about")
@@ -50,6 +65,11 @@ const CustomCards = (props) => {
         }
         else if(data["name"] === "projects"){
             props.navigate("/projects")
+        }
+        else if(data["name"] === "gallery")
+        {
+            console.log("Handle clicked 1");
+            handleClick();
         }
     }
 
@@ -65,6 +85,11 @@ const CustomCards = (props) => {
 
     return(
         <div style={ cardContainerStyle }>
+                  <Snackbar
+                        open={state}
+                        onClose={handleClose}
+                        message="Coming soon. Still coding . . "
+                />
             <ImageListItem sx={{
                 boxShadow: 1,
                 border: 1,
@@ -103,6 +128,19 @@ export default function Home() {
 
     return(
         <div style={{ width: "100%" }}>
+                <div>
+                        <CssVarsProvider theme={customTheme}>
+                            <Box sx={(theme) => theme.typography.display4} align='center' > 
+                            Fall in love with some activity, and do it! Nobody
+                            ever figures out what life is all about ,and it doesn't matter.
+                            </Box>
+
+                            <Box sx={(theme) => theme.typography.display5} align='center'>
+                            -- Richard Feynman.
+                            </Box>
+                        </CssVarsProvider>
+                </div>
+
             <Box
                 sx={{
                     display: 'flex',
@@ -110,7 +148,6 @@ export default function Home() {
                     "@media(max-width: 768px)": {flexDirection: 'column'},
                     overflow: 'auto',
                     width: 'auto',
-                    background: ''
                 }}
                 padding='2%'
                 align='center'

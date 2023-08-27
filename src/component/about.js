@@ -1,6 +1,5 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import Chart from "chart.js/auto";
 import hackerrank from '../img/hackerrank.svg';
 import github from '../img/github.svg';
 import linkedin from '../img/linkedin.svg';
@@ -8,7 +7,6 @@ import geektrust from '../img/geektrust.ico';
 import back from '../img/back.png';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
-import { CategoryScale } from "chart.js";
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ControlledAccordions from "./accordionCustom";
@@ -27,7 +25,7 @@ const ResumeComponent = () => {
 const socialLinks = {
     "github": "https://github.com/biltu926",
     "hackerrank": "https://www.hackerrank.com/spiral_bomb",
-    "likedin": "https://www.linkedin.com/supratim-halder",
+    "likedin": "https://www.linkedin.com/in/supratim-halder/",
     "geektrust": "https://www.geektrust.com/coding/code-portfolio"
 }
 

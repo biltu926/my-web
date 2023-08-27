@@ -6,8 +6,7 @@ import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/material/styles';
 import { Greenarc, ParaboleTwo, ParaboleOne, Freelance, TravelItinerary } from './WorkExp';
-import { CssVarsProvider } from '@mui/joy/styles';
-import { customTheme } from "../Constants";
+
 import '../App.css';
 
 
