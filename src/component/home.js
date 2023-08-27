@@ -48,6 +48,9 @@ const CustomCards = (props) => {
         else if(data["name"] === "writing"){
             window.location.href = `https://technicaldopamine.tech.blog/`;
         }
+        else if(data["name"] === "projects"){
+            props.navigate("/projects")
+        }
     }
 
     const cardContainerStyle = {

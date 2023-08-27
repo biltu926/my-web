@@ -5,10 +5,12 @@ import hackerrank from '../img/hackerrank.svg';
 import github from '../img/github.svg';
 import linkedin from '../img/linkedin.svg';
 import geektrust from '../img/geektrust.ico';
+import back from '../img/back.png';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
 import { CategoryScale } from "chart.js";
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import ControlledAccordions from "./accordionCustom";
 
 import '../App.css';
@@ -35,6 +37,8 @@ const redirectExternal = (social) => {
 
 const About = () => {
 
+    const navigate = useNavigate();
+
     const socialStyle = {
         fontSize: 20,
         color: "#0F3964",
@@ -58,8 +62,24 @@ const About = () => {
         flexWrap: 'wrap',
     }
 
+    const Back = () => {
+        return(
+            <div onClick={() => navigate(-1)} style={{
+                color: '#A119E5',
+                display: 'flex',
+                fontWeight: 'bold',
+                fontSize: 15,
+                marginTop: 20
+            }}>
+                <img src={back} alt="back" width={20} height={20} style={{ marginRight: 5 }}></img>
+                Home
+        </div>
+        )
+    }
+
     return(
         <div className="Resume-container-low">
+            <Back/>
             <div style={socialContainer}>
 
                 <div onClick={() => redirectExternal("hackerrank")} style={socialDivStyle}>

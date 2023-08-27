@@ -226,7 +226,7 @@ export default function ControlledAccordions() {
 
                     <li>
                       <Typography sx={{ color: textColor }}>
-                      Obtained silver member in coding at 
+                      Obtained silver membership in coding at 
                       <a href="https://www.geektrust.com/coding/code-portfolio" 
                       target="_blank"
                       className='Href-text-color'> Geektrust</a>

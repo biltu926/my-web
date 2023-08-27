@@ -20,49 +20,41 @@ export default function Footer() {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4} align="center">
             <Typography variant="h6" color="#F7F9F9" gutterBottom align="center">
-              Tech stack for this website
+              Tech stack for this site
             </Typography>
             <Typography variant="body2" color="#D0D3D4">
-              <ul>
-                <li>Frontend lilbrary: Reactjs</li>
-                <li>Hosting: Github pages</li>
-              </ul>
+                <li>Reactjs</li>
+                <li>Vercel</li>
             </Typography>
           </Grid>
 
 
           <Grid item xs={12} sm={4} align="center">
             <Typography variant="h6" color="#F7F9F9" gutterBottom >
-              Connect with me
+              Address
             </Typography>
-            <Link href="https://www.facebook.com/" color="#FDFEFE" >
-              <Facebook />
-            </Link>
-            <Link
-              href="https://www.instagram.com/"
-              sx={{ pl: 1, pr: 1 }}
-             color="#FDFEFE">
-              <Instagram />
-            </Link>
-            <Link href="https://www.twitter.com/" color="#FDFEFE" >
-              <Twitter />
-            </Link>
+            <div>
+              <Typography variant="h6" color="#F7F9F9" gutterBottom>
+                112 A, Regent colony, Tollygunge, Kolkata 700040.
+              </Typography>
+            </div>
           </Grid>
 
           <Grid item xs={12} sm={4} align="center">
             <Typography variant="h6" color="#F7F9F9" gutterBottom >
               Connect with me
             </Typography>
-            <Link href="https://www.facebook.com/" color="#FDFEFE" >
+            <Link href="https://www.facebook.com/suprtim6?mibextid=b06tZ0" color="#FDFEFE" target='_blank'>
               <Facebook />
             </Link>
             <Link
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/_hello_underworld"
               sx={{ pl: 1, pr: 1 }}
-             color="#FDFEFE">
+              target='_blank'
+              color="#FDFEFE">
               <Instagram />
             </Link>
-            <Link href="https://www.twitter.com/" color="#FDFEFE" >
+            <Link href="https://www.twitter.com/supratimhldr" color="#FDFEFE" >
               <Twitter />
             </Link>
           </Grid>
