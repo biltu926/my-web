@@ -52,16 +52,10 @@ const CustomCards = (props) => {
 
     const cardContainerStyle = {
         display: 'flex',
-        height: '30%',
-        width: '30%', 
         padding: 10, 
         marginTop: '10%',
         marginLeft: 'auto',
         marginRight: 'auto',
-
-        "@media(max-width: 768px)":{
-            width: '70vh'
-        }
     }
 
     return(
