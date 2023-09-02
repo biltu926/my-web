@@ -10,6 +10,7 @@ import '../App.css';
 
 const socialLinks = {
     "columbus": "http://columbus-frontend.s3-website.ap-south-1.amazonaws.com",
+    "dsa_problems": "https://github.com/biltu926/dsa_problems"
 }
 
 const redirectExternal = (social) => {
@@ -29,12 +30,16 @@ const Projects = () => {
     const projectsWrap = {
         display: 'flex', 
         flexDirection: 'column',
+        "@media (maxWidth: 768px)": {
+            flexDirection: "row"
+        },
         alignItems: 'center',
         marginBottom: '2%',
         "@media (maxWidth: 768px)": {
             marginBottom: "5%"
         },
-        marginTop: '5%'
+        marginTop: '5%',
+
     }
 
     const containerBox = {
@@ -63,14 +68,14 @@ const Projects = () => {
             <Back/>
                 <div style={{ marginBottom: 5 }}>
                     <div style={projectsWrap}>
-                        <Typography fontWeight='bold' fontSize={25} color={sectionHeadingColor}> Projects </Typography>
+                        <Typography fontWeight='bold' fontSize={20} color={sectionHeadingColor}> Projects </Typography>
                     </div>
 
                     <div >
                         <ol>
                             <li>    
                                 <div onClick={() => redirectExternal("columbus")} style={containerBox} >
-                                        <Typography style={projectLinkStyle}> An AI based travel itinerary <a href="#">app </a> (work in progress). </Typography>
+                                        <Typography style={projectLinkStyle}> An AI based travel itinerary <a href="#" target="_blank">app </a> (work in progress). </Typography>
                                 </div>
                             </li>
 
@@ -87,14 +92,14 @@ const Projects = () => {
 
                 <div style={{ marginBottom: 5 }}>
                     <div style={projectsWrap}>
-                        <Typography fontWeight='bold' fontSize={25} color={sectionHeadingColor}> Competitive code submissions </Typography>
+                        <Typography fontWeight='bold' fontSize={20} color={sectionHeadingColor}> Competitive code submissions </Typography>
                     </div>
 
                     <div>
                         <ol>
                             <li>
-                            <div style={containerBox}>
-                                <Typography style={projectLinkStyle}> Github repo link. </Typography>
+                            <div style={containerBox} onClick={() => redirectExternal("dsa_problems")}>
+                                <Typography style={projectLinkStyle}> Github repo <a href="#" target="_blank">link.</a></Typography>
                             </div>
                             </li>
                         </ol>

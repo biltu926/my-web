@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router>
-      <div style={{ width: "100%", background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)" }}>
+      <div style={{ width: "100%", background: "linear-gradient(90deg, #effaff 0%, #d9e7ff 100%)" }}>
 
         <Header/>
 

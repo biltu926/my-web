@@ -38,6 +38,8 @@ export const customTheme = extendTheme({
       display4: {
         fontSize: 26,
         marginTop: 10,
+        marginLeft: '2%',
+        marginRight: '2%',
         background: 'linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%)',
         fontFamily: `'Playfair Display', serif;`,
         fontWeight: 'light',
