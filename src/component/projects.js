@@ -1,9 +1,9 @@
 import React from "react";
-import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Chip from '@mui/material/Chip';
 import back from '../img/back.png';
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import ControlledAccordions from "./accordionCustom";
 
 import '../App.css';
 
@@ -21,19 +21,27 @@ const Projects = () => {
     const navigate = useNavigate();
 
     const projectLinkStyle = {
-        fontSize: 30,
+        fontSize: 20,
         color: "#0F3964",
-        fontWeight: "light",
+        
     }
 
     const projectsWrap = {
         display: 'flex', 
-        flexWrap: 'wrap',
         flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: '30%',
-        marginTop: '10%'
+        marginBottom: '2%',
+        "@media (maxWidth: 768px)": {
+            marginBottom: "5%"
+        },
+        marginTop: '5%'
     }
+
+    const containerBox = {
+        display: 'flex'
+    }
+
+    const sectionHeadingColor = "#545AA7" 
 
     const Back = () => {
         return(
@@ -53,20 +61,47 @@ const Projects = () => {
     return(
         <div style={projectsWrap}>
             <Back/>
-                <ul>
-                    <li>
-                        <div onClick={() => redirectExternal("columbus")} >
-                            <Typography style={projectLinkStyle}> An AI based travel itinerary <a href="#">app(work in progress)</a> </Typography>
-                        </div>
-                    </li>
+                <div style={{ marginBottom: 5 }}>
+                    <div style={projectsWrap}>
+                        <Typography fontWeight='bold' fontSize={25} color={sectionHeadingColor}> Projects </Typography>
+                    </div>
 
-                    <li>
-                        <div>
-                            <Typography style={projectLinkStyle}> This website </Typography>
-                        </div>
-                    </li>
+                    <div >
+                        <ol>
+                            <li>    
+                                <div onClick={() => redirectExternal("columbus")} style={containerBox} >
+                                        <Typography style={projectLinkStyle}> An AI based travel itinerary <a href="#">app </a> (work in progress). </Typography>
+                                </div>
+                            </li>
 
-                </ul>
+
+                            <li>
+                                <div style={containerBox}>
+                                    <Typography style={projectLinkStyle}> This website. </Typography>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div style={{ marginBottom: 5 }}>
+                    <div style={projectsWrap}>
+                        <Typography fontWeight='bold' fontSize={25} color={sectionHeadingColor}> Competitive code submissions </Typography>
+                    </div>
+
+                    <div>
+                        <ol>
+                            <li>
+                            <div style={containerBox}>
+                                <Typography style={projectLinkStyle}> Github repo link. </Typography>
+                            </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+
         </div>
 
     )

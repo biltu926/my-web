@@ -38,7 +38,7 @@ export const customTheme = extendTheme({
       display4: {
         fontSize: 26,
         marginTop: 10,
-        background: 'radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
+        background: 'linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%)',
         fontFamily: `'Playfair Display', serif;`,
         fontWeight: 'light',
         WebkitBackgroundClip: 'text',

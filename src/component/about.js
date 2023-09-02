@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import hackerrank from '../img/hackerrank.svg';
 import github from '../img/github.svg';
 import linkedin from '../img/linkedin.svg';
-import geektrust from '../img/geektrust.ico';
 import back from '../img/back.png';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';

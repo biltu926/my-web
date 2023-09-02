@@ -13,7 +13,8 @@ export default function Footer() {
       sx={{
         p: 5,
         marginTop: '20%',
-        bottom: 0
+        bottom: 0,
+        background: 'linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%)'
       }}
     >
       <Container maxWidth="lg">
