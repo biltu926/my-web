@@ -216,7 +216,7 @@ export default function ControlledAccordions() {
                   <ol style={{ color: textColor }}>
                     <li>
                       <Typography sx={{ color: textColor }}>
-                      Obtained gold badge in Problem solving, Python and SQL in 
+                      Obtained gold badge (highest 6 stars) in Problem solving, Python and SQL in 
                       <a href="https://www.hackerrank.com/spiral_bomb" 
                       target="_blank"
                       className='Href-text-color'> Hackerrank</a>

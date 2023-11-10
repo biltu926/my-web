@@ -11,6 +11,7 @@ import graphql from '../img/graphql.png';
 import postgre from '../img/postgresql.png';
 import kafka from '../img/kafka.png';
 import flask from '../img/flask.png';
+import cloud from '../img/cloud.jpg';
 import redis from '../img/redis.png';
 import azure from '../img/azure.png';
 import html from '../img/html.png';
@@ -44,7 +45,7 @@ export const Greenarc = () => {
                         <Chip icon={<img src={html} alt="html" width={20} height={20}></img>} style={{ color: chipTextColor, background: chipBgColor }} label="Html" variant="outlined"/>
                     </Stack>
                         <ul>
-                        <Typography sx={{ color: textColor }}>Migrating the frontend to Reactjs from HTML, Bootstrap.</Typography>
+                        <Typography sx={{ color: textColor }}>Leading the migration of the javascript, html, css based frontend to Reactjs.</Typography>
                         </ul>
                     
                     <Typography sx={{ color: textColor, 
@@ -62,17 +63,17 @@ export const Greenarc = () => {
                     </Stack>
 
                         <ul>
-                        <Typography sx={{ color: textColor }}> Working on building Greenarc’s impact measurement platform for Investors.
+                        <Typography sx={{ color: textColor }}> Developed Greenarc’s impact measurement and assessment SAAS application backend.
                         </Typography>   
                         </ul>
                         
                         <ul>
-                        <Typography sx={{ color: textColor}}>Shaping the backend of the product which works on the investment data and generates impact scores, analytics and reports for a variety of investments.</Typography>
+                        <Typography sx={{ color: textColor}}>Implemented the backend system of the product which works on the investment data and generates impact scores, analytics and reports for a variety of investor portfolios.</Typography>
                         </ul>
 
                         <ul>
                         <Typography sx={{ color: textColor}}>
-                        Managing the implementation of the REST apis and the backend for the platform.
+                        Wrote the REST based apis and python services.
                         </Typography>
                         </ul>
 
@@ -84,7 +85,19 @@ export const Greenarc = () => {
 
                         <ul>
                         <Typography sx={{ color: textColor }}>
-                        Optimising and enhancing the code, and architecture to improve user experience, and to boost the quality of the deliverables.
+                        Optimised the overall architecture to boost performance. i.e, including Celery for async task management in the backend, included parquet, polars to speed up analytics computations etc.
+                        </Typography>
+                        </ul>
+
+                        <ul>
+                        <Typography sx={{ color: textColor }}>
+                        Included unittetsts for the backend python classes and functions.
+                        </Typography>
+                        </ul>
+
+                        <ul>
+                        <Typography sx={{ color: textColor }}>
+                        Used libraries like coverage to maintain test coverage of the backend code as it grows in size.
                         </Typography>
                         </ul>
                     <Typography sx={{ color: textColor, 
@@ -101,16 +114,40 @@ export const Greenarc = () => {
                         <Chip icon={<img src={mongo} alt="mongo" width={20} height={20}></img>} style={{ color: chipTextColor, background: chipBgColor }} label="Mongo" variant="outlined"/>
                     </Stack>
                         <ul>
-                        <Typography sx={{ color: textColor }}>Implementing impact score and analytics generation algorithms for different sectors (Individual, Msme, Education).</Typography>
+                        <Typography sx={{ color: textColor }}>Wrote impact score and analytics generation algorithms for different sectors (Individual, Msme, Education).</Typography>
                         </ul>
                         <ul>
-                        <Typography sx={{ color: textColor }}>Optimising existing algorithms to enhance the user experience, like improving the execution time for loan impact assessment algorithm to reduce the overall waiting time for the user.</Typography>
+                        <Typography sx={{ color: textColor }}>Optimised existing algorithms to boost performance, and reduce error margin.</Typography>
                         </ul>
                         <ul>
-                        <Typography sx={{ color: textColor }}>Implemented changes in the architecture to cut down on network round trips between servers, and cloud in order to reduce the loading time for I/O operations.</Typography>
+                        <Typography sx={{ color: textColor }}>Incorporated clean code principals, and design patterns to improve the modularity, and maintainability of the existing algorithms.</Typography>
                         </ul>
                         <ul>
-                        <Typography sx={{ color: textColor }}>Implemented design patterns to improve the code quality, and maintainability.</Typography>
+                        <Typography sx={{ color: textColor }}>Wrote code to compute the analytics for different investment portfolios.</Typography>
+                        </ul>
+                        <ul>
+                        <Typography sx={{ color: textColor }}>Contributed to data modelling, and schema design for Mongo collections to facilitate better felxibility in object mapping, performance and design.</Typography>
+                        </ul>
+
+
+                        <Typography sx={{ color: textColor, 
+                                      fontSize: 18, 
+                                      fontWeight: 'bold', 
+                                      marginTop: 5 }}>
+                    Security enhancements of the web application and the cloud resources
+                    </Typography>
+                    <Stack direction="row" spacing={1}>
+                        <Chip icon={<img src={python} alt="python" width={20} height={20}></img>} style={{ color: chipTextColor, background: chipBgColor }} label="Python" variant="outlined"/>
+                        <Chip icon={<img src={cloud} alt="cloud" width={20} height={20}></img>} style={{ color: chipTextColor, background: chipBgColor }} label="Cloud" variant="outlined"/>
+                    </Stack>
+                        <ul>
+                        <Typography sx={{ color: textColor }}>Maintained the frontend, and the backend code to adhere to the security best practices like enabling CORS, enabling CSP, CSRF tokens, including SRI attributes, reducing inline scripting etc.</Typography>
+                        </ul>
+                        <ul>
+                        <Typography sx={{ color: textColor }}>Periodically monitored the security audit reports(ZAP, Heyhack) and making necessary changes to keep the application secured.</Typography>
+                        </ul>
+                        <ul>
+                        <Typography sx={{ color: textColor }}>Took steps to implement the security of the user data by ensuring encryption of the data at rest, data in transit.</Typography>
                         </ul>
 
             </div>
@@ -143,11 +180,15 @@ export const ParaboleTwo = () => {
             <Typography sx={{ color: textColor }}>Co-designed the framework and architecture of Parabole ACE ( A SaaS platform to automate ML model training, and using the trained models to optimise order management).</Typography>
             </ul>
             <ul>
+            <Typography sx={{ color: textColor }}>Wrote backend python services (order processing service, order optimisation service etc).</Typography>
+            </ul>
+            <ul>
             <Typography sx={{ color: textColor }}>Wrote Rest APIs for the ACE services.</Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor }}>Helped in integration of ACE apis with third party UI.</Typography>
+            <Typography sx={{ color: textColor }}>Optimized performance by implementing design patterns, db query optimization.</Typography>
             </ul>
+            
         
         <Typography sx={{ color: textColor, 
                           fontSize: 18, 
@@ -196,22 +237,22 @@ export const ParaboleOne = () => {
                 <Chip icon={<img src={kafka} alt="kafka" width={20} height={20}></img>} style={{ color: chipTextColor, background: chipBgColor }} label="Kafka" variant="outlined" />
         </Stack>
             <ul>
-            <Typography sx={{ color: textColor }}>Implemented Kafka pipeline.</Typography>
+            <Typography sx={{ color: textColor }}>Integrated Kafka bus for python services.</Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor }}>Implemented document parser using apache tika.</Typography>
+            <Typography sx={{ color: textColor }}>Wrote document parser using python, apache tika for text extraction.</Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor }}>Implemented webcrawler for pdf/text/html data scrapping.</Typography>
+            <Typography sx={{ color: textColor }}>Wrote webcrawler for pdf/text/html data scrapping.</Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor }}>Wrote Flask hosted rest apis for the platform.</Typography>
+            <Typography sx={{ color: textColor }}>Implemented restful APIs for TRAIN..</Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor }}>Wrote shell scripts for server operations.</Typography>
+            <Typography sx={{ color: textColor }}>Wrote shell scripts for automating tasks.</Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor}}>Running, maintaining, deploying services on Azure VMs..</Typography>
+            <Typography sx={{ color: textColor}}>Deployed services on Azure VMs.</Typography>
             </ul>
         
         <Typography sx={{ color: textColor, 
@@ -267,13 +308,16 @@ export const Freelance = () => {
                 <Chip icon={<img src={pandas} alt="pandas" width={15} height={15}></img>} style={{ color: chipTextColor, background: chipBgColor }} label="Pandas" variant="outlined" />
         </Stack>
             <ul>
-            <Typography sx={{ color: textColor }}>Wrote backend code for downloading stock trading data (cronjobs). </Typography>
+            <Typography sx={{ color: textColor }}>Wrote python code for downloading stock trading data. </Typography>
             </ul>
             <ul>
-            <Typography sx={{ color: textColor }}>Wrote code for automatic stock analytics generation.</Typography>
+            <Typography sx={{ color: textColor }}>Wrote python code for automatic stock analytics generation.</Typography>
             </ul>
             <ul>
             <Typography sx={{ color: textColor }}>Wrote python based backend to model different trading strategies.</Typography>
+            </ul>
+            <ul>
+            <Typography sx={{ color: textColor }}>Wrote functions to send emails, slack messages about the stock reports for each day.</Typography>
             </ul>
 
         </div>
